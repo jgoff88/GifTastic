@@ -16,6 +16,7 @@ var topics = ["guitar", "cello"];
     //topics.forEach(buttons);
     $("button").on("click", function() {
      // Example queryURL for Giphy API
+     $("#gif-images").empty()
         var topic = $(this).attr("data-topic");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + topic + "&api_key=RhoHUzXl6SP5fFtT3qBCsi2mOMC53BaJ&limit=10";
 
@@ -45,6 +46,7 @@ var topics = ["guitar", "cello"];
 
                     $("#gif-images").prepend(gifDiv);
                 }
+
             }
         });
     });
